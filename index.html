@@ -14,7 +14,7 @@
                 <img src="assets/images/logo.png" alt="logo" class="logo">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -25,5 +25,72 @@
             </div>
         </div>
     </div>
+     <!-- -----------------about---------------- -->
+     <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-me">I am a highly skilled and passionate software developer with a Bachelor's degree in Computer Science and 2 years of experience in the industry. I specialize java development and have a proven track record of delivering high-quality software solutions that meet and exceed stakeholder's expectations. I enjoy collaborating with others to find creative solutions to complex problems, and I am always eager to learn new things and take on new challenges.</p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>Java, Python, JavaScript</li>
+                            <li><span>Framework and Libraries</span><br>Sprint Boot, Node.js <br>React, HTML, CSS, Bootstrap <br>JUnit, RCP, RAP</li>
+                            <li><span>Databases</span><br>DB2, Redshift, Athena, Spark, <br> Snowflake, MySQL, MongoDB</li>
+                            <li><span>Cloud</span><br> AWS, Google Cloud, Azure</li>
+                            <li><span>Other</span><br> Markdown, Git, Maven, Jira, Bamboo, Jenkins</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2022-current</span>
+                                <br>Software Engineer I, <b> Rocket Software </b> <br>
+                                <br>As a backend developer, primary focus involves development and designing of a Java‐based application using RCP/RAP and OSGI Framework, following the agile methodology.
+                            </li>
+                            <li>
+                                <span>2021-2022</span>
+                                <br>Programmer Analyst Trainee, <b>Cognizant Technology Solution </b><br>
+                                <br>A Java Full Stack Engineer worked on a live project for Core Logic, a California-based organization. The job involved implementing backend infrastructure modifications to maintain operational stability and dataflow in the application.
+                            </li>
+                            <li><span>2020-2020</span>
+                                <br>Web Developer Intern, <b>GTF</b> <br>
+                                <br>Developed a React-based administration dashboard to monitor flora and fauna statistics along the Ganga river bank in Uttar Pradesh. Used Mapbox API to visualize the geotagged data on a geographic map.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017-2021</span><br>B.Tech CSE at Galgotias University, Uttar Pradesh</li>
+                            <li><span>2017</span><br>12th at Citizens School, Surat, Gujarat</li>
+                            <li><span>2015</span><br>10th at LP Savani Vidhyabhavan. Surat, Gujarat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
